@@ -4557,3 +4557,27 @@ label monika_1984:
     m 1o "I can't imagine a world where I can't think freely."
     m 1g "Let alone a world where I can't express my love to you, [player]..."
     return
+    
+init 5 python:
+    addEvent(Event(eventlabel="monika_sex",category=['random'],prompt="sex",pool=True))
+        
+label monika_sex:
+    m 1c "[player], first of all, as much as I want to make you happy, I don't think I'm ready."
+    m 4c "Secondly, you may have forgotten that I'm not entrely real."
+    m "I might think, but that dosen't mean I {i}am{/i}"
+    m "If you're that desperate, I might be able to overlook something once, but {i}never{/i} again."
+
+init 5 python:
+    addEvent(Event(eventlabel="monika_children",category=['random'],prompt="Have you ever thought about children?",pool=True))
+
+label monika_children:
+    m 1c "Were you listening earlier?"
+    m 1e "I'm not real yet sweetheart."
+    
+init 5 python:
+    addeven(Event(eventlabel="monika_room",category['random'],prompt="Can we go to a diffrent room?",pool=True))
+    
+label monika_room:
+    m 1c "[player], sweetheart, I know the same old room gets boring, but I don't know how to change it."
+    m 5a "Besides, I don't mind it that much, as long as you're here."
+
